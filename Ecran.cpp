@@ -9,7 +9,7 @@ Adafruit_SSD1306 Ecran::getAdafruit()
   return adafruit;
 }
 
-void Ecran::begin()
+void Ecran::begin(*stream)
 {
   Serial.println("Démarrage de l'écran....");
   bool answer = initializeScreen();
