@@ -2,7 +2,7 @@
 #define Ecran_h
 
 #include "Arduino.h"
-#include "Adafruit_SSD1306.h" //Pour l,affichage OLED
+#include "Adafruit_SSD1306.h" //Pour l'affichage OLED
 #include <Wire.h>             //Pour l'affichage OLED
 
 #define DEFAULT_ADDRESS 0x3C
@@ -23,8 +23,8 @@ public:
     Ecran();
 
     //Design oriented
-    void begin();
-    //void clear();
+    void begin(Stream *stream);
+    void clear();
     //void showSplashScreen();
     //void printSmall(char *str);
     //void printMedium(char *str);

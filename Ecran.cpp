@@ -2,7 +2,6 @@
 
 Ecran::Ecran() : adafruit(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET)
 {
- 
 }
 
 Adafruit_SSD1306 Ecran::getAdafruit()
@@ -12,17 +11,20 @@ Adafruit_SSD1306 Ecran::getAdafruit()
 
 void Ecran::begin()
 {
-  if (initializeScreen())
+  Serial.println("Démarrage de l'écran....");
+  bool answer = initializeScreen();
+  delay(500);
+  if (answer)
   {
-    //Serial.println("> Affichage démarré.");
-    //clear();
+    Serial.println("...Affichage démarré.");
+    clear();
     //showSplashScreen();
     //delay(1500);
     //clear();
   }
   else
   {
-    //Serial.println("> Incapable de communiquer avec l'affichage'.");
+    Serial.println("....Incapable de communiquer avec l'affichage'.");
   }
 }
 /*void Ecran::printSmall(char *msg)
@@ -43,13 +45,12 @@ void Ecran::printLarge(char *msg)
 void Ecran::showSplashScreen()
 {
   //printMedium("ProtoTPhys\n   2V1\n  09-2020\n   CAL");
-}
+}*/
 void Ecran::clear()
 {
   adafruit.clearDisplay();
-  adafruit.display();
 }
-*/
+
 int16_t Ecran::width()
 {
   return adafruit.width();
