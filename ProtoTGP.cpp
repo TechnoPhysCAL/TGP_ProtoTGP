@@ -2,6 +2,7 @@
 
 ProtoTGP::ProtoTGP() : g(33), d(39), h(34), b(35), s(36), r(4), v(2), scr()
 {
+  
 }
 
 void ProtoTGP::begin()

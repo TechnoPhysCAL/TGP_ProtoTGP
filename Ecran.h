@@ -24,22 +24,25 @@ public:
 
     //Design oriented
     void begin();
-    void clear();
-    void showSplashScreen();
-    void printSmall(const char[]);
-    void printMedium(const char[]);
-    void printLarge(const char[]);
-
+    //void clear();
+    //void showSplashScreen();
+    //void printSmall(char *str);
+    //void printMedium(char *str);
+    //void printLarge(char *str);
+    int16_t width();
+    int16_t height();
 
     //Hardware oriented
     bool initializeScreen();
-    void setFont(int);
-    void writeFromBeginning(const char[]);
+    //void setFont(int);
+    //void writeFromBeginning(char *str);
 
     Adafruit_SSD1306 getAdafruit();
 
 private:
     Adafruit_SSD1306 adafruit;
-    int _addI2C_OLED;
+   
+    //String _buffer;
 };
 #endif
+
