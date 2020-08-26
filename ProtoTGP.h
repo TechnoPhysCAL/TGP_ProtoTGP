@@ -26,20 +26,14 @@ public:
     void begin();
     void refresh();
 
-    BoutonPin gauche();
-    BoutonPin droite();
-    BoutonPin haut();
-    BoutonPin bas();
-    BoutonPin selection();
+    void setDebounceDelay(unsigned long);
+	void setLongPressDelay(unsigned long);
+	void setLongPressInterval(unsigned long);
 
+    BoutonPin gauche, droite, haut, bas, selection;
     DELPin rouge, verte;
-    DELPin delRouge();
-    DELPin delVerte();
-    Ecran screen;
-    Ecran ecran();
+    Ecran ecran;
 
 private:
-    
-    BoutonPin g, d, h, b, s;
 };
 #endif

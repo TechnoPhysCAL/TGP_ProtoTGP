@@ -1,5 +1,5 @@
 #######################################
-# Syntax Coloring Map for Clavier
+# Syntax Coloring Map for TGP ProtoTGP
 #######################################
 
 #######################################
@@ -7,7 +7,7 @@
 #######################################
 
 ProtoTGP	KEYWORD1
-Ecran   KEYWORD1
+
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
@@ -17,10 +17,13 @@ droite	KEYWORD2
 haut	KEYWORD2
 bas	KEYWORD2
 selection	KEYWORD2
-delRouge	KEYWORD2
-delVerte	KEYWORD2
+rouge	KEYWORD2
+verte	KEYWORD2
 ecran	KEYWORD2
 
+setDebounceDelay	KEYWORD2
+setLongPressDelay	KEYWORD2
+setLongPressInterval	KEYWORD2
 ######################################
 # Constants (LITERAL1)
 #######################################

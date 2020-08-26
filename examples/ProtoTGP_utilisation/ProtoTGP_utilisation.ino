@@ -1,7 +1,7 @@
 /*
   Librairie TPG ProtoTGP - ProtoTGP_utilisation.ino
 
-  ###DESCRIPTION
+  ### Démonstration de l'utilisation de la classe ProtoTGP.
 
   Note: ###NOTE
 
@@ -9,8 +9,8 @@
 
 #include <ProtoTGP.h> //Pour utiliser la librairie ProtoTGP
 
-ProtoTGP proto;
-
+ProtoTGP proto; //Création de l'objet 'proto', de type ProtoTGP
+ 
 void setup()
 {
   Serial.begin(115200);
@@ -20,40 +20,47 @@ void setup()
 void loop()
 {
   proto.refresh(); //Permet d'actualiser tout le système de la plateforme. CETTE MÉTHODE EST OBLIGATOIRE EN DÉBUT DE LOOP(), IDÉALEMENT.
-  //delay(25);
-  //Serial.println(proto.delRouge().get()?"TRUE":"FALSE");
-  if (proto.haut().isPressed())
+  
+  if (proto.haut.isPressed()) 
   {
     Serial.println("HAUT appuyé.");
-    proto.rouge.set(true);  //POUR LA DEL LA FONCTION ROUGE() NE FONCTIONNE PAS.
-    proto.verte.set(true);
-    proto.screen.printSmall("Haut ");  // LA FONCTION ECRAN() NE FONCTIONNE PAS.
+    
+    proto.rouge.set(true);  //Allume la DEL rouge.
+    proto.verte.set(true);  //Allume la DEL verte.
+    
+    proto.ecran.ecrire("Haut "); //Écrire le texte sur l'écran (la taille du texte par défaut est 1).
 
   }
 
-  if (proto.bas().isPressed())
+  if (proto.bas.isPressed())
   {
     Serial.println("BAS appuyé.");
-    proto.rouge.set(false);
-    proto.verte.set(false);
-    proto.screen.printSmall("Bas ");
+    
+    proto.rouge.set(false); //Éteindre la DEL rouge.
+    proto.verte.set(false); //Éteindre la DEL verte.
+    
+    proto.ecran.ecrire("Bas ",5); //Écrire le texte sur l'écran avec une taille de 5.
   }
-  if (proto.gauche().isPressed())
-  {
-    Serial.println("GAUCHE appuyé.");
-    proto.rouge.setBlinking(!proto.rouge.getBlinking());
+  if (proto.gauche.isPressed())
+  {    
+    Serial.println("GAUCHE appuyé."); 
+    
+    proto.rouge.setBlinking(!proto.rouge.getBlinking()); //Inverser le mode clignotement de la DEL rouge.
 
-    proto.screen.printSmall("Gauche ");
+    proto.ecran.ecrire("Gauche ",3); //Écrire le texte sur l'écran avec une taille de 3.
   }
-  if (proto.droite().isPressed())
+  if (proto.droite.isPressed())
   {
-    Serial.println("DROITE appuyé.");
-    proto.verte.setBlinking(!proto.verte.getBlinking());
-    proto.screen.printSmall("Droite ");
+    Serial.println("DROITE appuyé."); 
+   
+    proto.verte.setBlinking(!proto.verte.getBlinking()); //Inverser le mode clignotement de la DEL verte.
+    
+    proto.ecran.ecrire("Droite ",4); //Écrire le texte sur l'écran avec une taille de 4.
   }
-  if (proto.selection().isPressed())
+  if (proto.selection.isPressed())
   {
     Serial.println("SELECTION appuyé.");
-    proto.screen.printSmall("Selection ");
+    
+    proto.ecran.ecrire("Selection ",2); //Écrire le texte sur l'écran avec une taille de 2.
   }
 }
