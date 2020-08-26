@@ -29,6 +29,13 @@ void setup()
   proto.setLongPressInterval(50); //Ajuster l'intervalle des longs clics à 50 millisecondes pour tous les boutons.
 
   proto.selection.setLongPressDelay(1000); //Pour le bouton SELECTION seulement, ajuster le délai avant le long clic à 1000 millisecondes.
+
+  proto.ecran.ecrire("GAUCHE, DROITE, HAUT,\nBAS => deplacer le\ncurseur.\n\nSELECTION => effacer.", 1); //Afficher un texte explicatif.
+  delay(5000);
+  proto.ecran.ecrire(" A votre\n tour de\n dessiner!", 2); //Afficher un texte invitant.
+  delay(2000);                                             //Attendre que l'utilisateur lise le texte
+  proto.ecran.effacer();                                   //Effacer l'écran
+  imprimerXY();                                            //Imprimer le premier point
 }
 
 void loop()
@@ -83,12 +90,14 @@ void loop()
   {                                //Si le bouton SELECTION est relaché
     proto.rouge.set(false);        //Éteindre la DEL rouge.
     proto.rouge.setBlinking(true); //Activer le mode clignotement.
+    imprimerXY();                   //Imprimer le premier point.
   }
 
   if (proto.selection.isLongPressed())
   {                                 //Si le bouton SELECTION est longuement appuyé
     proto.ecran.effacer();          //Effacer l'écran
     proto.rouge.setBlinking(false); //Désactiver le mode clignotement.
+    
   }
 }
 
