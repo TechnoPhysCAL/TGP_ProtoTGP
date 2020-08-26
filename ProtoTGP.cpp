@@ -1,8 +1,15 @@
 #include "ProtoTGP.h"
 
-ProtoTGP::ProtoTGP() : g(33), d(39), h(34), b(35), s(36), r(4), v(2), scr()
+ProtoTGP::ProtoTGP() : g(PIN_BUTTON_GAUCHE),
+                       d(PIN_BUTTON_DROITE),
+                       h(PIN_BUTTON_HAUT),
+                       b(PIN_BUTTON_BAS),
+                       s(PIN_BUTTON_SELECTION),
+                       r(PIN_DEL_ROUGE),
+                       v(PIN_DEL_VERTE),
+                       scr()
 {
-  
+
 }
 
 void ProtoTGP::begin()
@@ -18,14 +25,13 @@ void ProtoTGP::refresh()
   s.refresh();
   r.refresh();
   v.refresh();
-
 }
 
-Bouton ProtoTGP::gauche() { return g; }
-Bouton ProtoTGP::droite() { return d; }
-Bouton ProtoTGP::haut() { return h; }
-Bouton ProtoTGP::bas() { return b; }
-Bouton ProtoTGP::selection() { return s; }
+BoutonPin ProtoTGP::gauche() { return g; }
+BoutonPin ProtoTGP::droite() { return d; }
+BoutonPin ProtoTGP::haut() { return h; }
+BoutonPin ProtoTGP::bas() { return b; }
+BoutonPin ProtoTGP::selection() { return s; }
 DELPin ProtoTGP::delRouge() { return r; }
 DELPin ProtoTGP::delVerte() { return v; }
 Ecran ProtoTGP::ecran() { return scr; }
