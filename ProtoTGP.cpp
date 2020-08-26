@@ -5,16 +5,15 @@ ProtoTGP::ProtoTGP() : g(PIN_BUTTON_GAUCHE),
                        h(PIN_BUTTON_HAUT),
                        b(PIN_BUTTON_BAS),
                        s(PIN_BUTTON_SELECTION),
-                       r(PIN_DEL_ROUGE),
-                       v(PIN_DEL_VERTE),
-                       scr()
+                       rouge(PIN_DEL_ROUGE),
+                       verte(PIN_DEL_VERTE),
+                       screen()
 {
-
 }
 
 void ProtoTGP::begin()
 {
-  scr.begin();
+  screen.begin();
 }
 void ProtoTGP::refresh()
 {
@@ -23,8 +22,8 @@ void ProtoTGP::refresh()
   h.refresh();
   b.refresh();
   s.refresh();
-  r.refresh();
-  v.refresh();
+  rouge.refresh();
+  verte.refresh();
 }
 
 BoutonPin ProtoTGP::gauche() { return g; }
@@ -32,6 +31,6 @@ BoutonPin ProtoTGP::droite() { return d; }
 BoutonPin ProtoTGP::haut() { return h; }
 BoutonPin ProtoTGP::bas() { return b; }
 BoutonPin ProtoTGP::selection() { return s; }
-DELPin ProtoTGP::delRouge() { return r; }
-DELPin ProtoTGP::delVerte() { return v; }
-Ecran ProtoTGP::ecran() { return scr; }
+DELPin ProtoTGP::delRouge() { return rouge; }
+DELPin ProtoTGP::delVerte() { return verte; }
+Ecran ProtoTGP::ecran() { return screen; }

@@ -22,6 +22,7 @@ class ProtoTGP
 {
 public:
     ProtoTGP();
+
     void begin();
     void refresh();
 
@@ -31,15 +32,14 @@ public:
     BoutonPin bas();
     BoutonPin selection();
 
+    DELPin rouge, verte;
     DELPin delRouge();
     DELPin delVerte();
-    
+    Ecran screen;
     Ecran ecran();
 
 private:
-    DELPin r;
-    DELPin v;
-    Ecran scr;
+    
     BoutonPin g, d, h, b, s;
 };
 #endif

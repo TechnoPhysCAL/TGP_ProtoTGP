@@ -20,41 +20,40 @@ void setup()
 void loop()
 {
   proto.refresh(); //Permet d'actualiser tout le système de la plateforme. CETTE MÉTHODE EST OBLIGATOIRE EN DÉBUT DE LOOP(), IDÉALEMENT.
-  delay(50);
-  Serial.println(proto.delRouge().get()?"TRUE":"FALSE");
+  //delay(25);
+  //Serial.println(proto.delRouge().get()?"TRUE":"FALSE");
   if (proto.haut().isPressed())
   {
     Serial.println("HAUT appuyé.");
-    proto.delRouge().set(true);
-    //proto.delVerte().set(true);
-   // proto.ecran().printSmall("Haut");
+    proto.rouge.set(true);  //POUR LA DEL LA FONCTION ROUGE() NE FONCTIONNE PAS.
+    proto.verte.set(true);
+    proto.screen.printSmall("Haut ");  // LA FONCTION ECRAN() NE FONCTIONNE PAS.
 
   }
 
   if (proto.bas().isPressed())
   {
     Serial.println("BAS appuyé.");
-    proto.delRouge().set(false);
-   // proto.delVerte().set(false);
-   // proto.ecran().printSmall("Bas");
+    proto.rouge.set(false);
+    proto.verte.set(false);
+    proto.screen.printSmall("Bas ");
   }
   if (proto.gauche().isPressed())
   {
     Serial.println("GAUCHE appuyé.");
-    proto.delRouge().setBlinking(false);
-   // proto.delVerte().setBlinking(false);
-   // proto.ecran().printMedium("Gauche");
+    proto.rouge.setBlinking(!proto.rouge.getBlinking());
+
+    proto.screen.printSmall("Gauche ");
   }
   if (proto.droite().isPressed())
   {
     Serial.println("DROITE appuyé.");
-    proto.delRouge().setBlinking(true);
-   // proto.delVerte().setBlinking(true);
-   // proto.ecran().printMedium("Droite");
+    proto.verte.setBlinking(!proto.verte.getBlinking());
+    proto.screen.printSmall("Droite ");
   }
   if (proto.selection().isPressed())
   {
     Serial.println("SELECTION appuyé.");
-    //proto.ecran().printLarge("Selection");
+    proto.screen.printSmall("Selection ");
   }
 }
