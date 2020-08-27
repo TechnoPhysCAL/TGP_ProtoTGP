@@ -42,6 +42,7 @@ void ProtoTGP::begin()
 }
 void ProtoTGP::refresh()
 {
+  ecran.refresh();
   gauche.refresh();
   droite.refresh();
   haut.refresh();
