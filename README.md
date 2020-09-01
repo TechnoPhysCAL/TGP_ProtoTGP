@@ -48,7 +48,7 @@ void loop()
 Proto()
 
 ```
-On spécification nécessaire, l'initialisation des divers éléments qui constituent ProtoTPhys sont initialisés selon leur broches respectives.
+Aucun paramètre nécessaire; l'initialisation des divers éléments qui constituent ProtoTPhys sont initialisés selon leur broches respectives.
 
 
 ## Propriétés disponibles
@@ -62,26 +62,26 @@ Bouton proto.haut
 Bouton proto.bas
 Bouton proto.selection
 ```
-Permet d'accéder aux objets de type Bouton. Toutes les méthodesde la classe Bouton sont ensuite disponibles.
+Permet d'accéder aux objets de type Bouton. Toutes les méthodes de la classe [Bouton](https://github.com/TechnoPhysCAL/TGP_Bouton) sont ensuite disponibles.
 
 ---
 ```cpp
 Del proto.rouge
 Del proto.verte
 ```
-Permet d'accéder aux objets de type Del.  Toutes les méthodes de la classe Del sont ensuite disponibles.
+Permet d'accéder aux objets de type Del.  Toutes les méthodes de la classe [TGP Del](https://github.com/TechnoPhysCAL/TGP_Del) sont ensuite disponibles.
 
 ---
 ```cpp
 Ecran proto.ecran
 ```
-Permet d'accéder à l'objet de type Ecran.  Toutes les méthodes de la classe Ecran sont ensuite disponibles.
+Permet d'accéder à l'objet de type Ecran.  Toutes les méthodes de la classe [Ecran](https://github.com/TechnoPhysCAL/TGP_Ecran) sont ensuite disponibles.
 
 ## Méthodes disponibles
 ```cpp
 void begin()
 ```
-Initialise toutes les composantes de la plateforme.
+Initialise toutes les composantes de la plateforme. Doit être appelée dans la fonction setup().
 
 ---
 ```cpp
@@ -97,13 +97,13 @@ Permet de modifier le temps de "debouncing" en millisecondes pour tous les bouto
 
 ---
 ```cpp
-void setLongPressDelay(unsigned long);
+void setLongPressDelay(unsigned long)
 ```
 Permet de modifier le temps en millisecondes nécessaire pour que le bouton soit considéré comme 'maintenu longtemps' pour tous les boutons.
 
 ---
 ```cpp
-void setLongPressInterval(unsigned long);
+void setLongPressInterval(unsigned long)
 ```
 Permet de modifier le temps en millisecondes entre chaque valeur vraie de la méthode  'isLongPressed()' pour tous les boutons.
 
