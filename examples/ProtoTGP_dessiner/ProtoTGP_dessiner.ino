@@ -33,13 +33,14 @@ void setup()
   proto.ecran.ecrire("GAUCHE, DROITE, HAUT,\nBAS => deplacer le\ncurseur.\n\nSELECTION => effacer.", 1); //Afficher un texte explicatif.
   proto.ecran.display();
   delay(5000);
+  proto.ecran.effacer();
   proto.ecran.ecrire(" A votre\n tour de\n dessiner!", 2); //Afficher un texte invitant.
   proto.ecran.display();
-  delay(2000);                                             //Attendre que l'utilisateur lise le texte
-  
-  proto.ecran.effacer();                                   //Effacer l'écran
+  delay(2000); //Attendre que l'utilisateur lise le texte
+
+  proto.ecran.effacer(); //Effacer l'écran
   proto.ecran.display();
-  imprimerXY();                                            //Imprimer le premier point
+  imprimerXY(); //Imprimer le premier point
 }
 
 void loop()
@@ -94,14 +95,13 @@ void loop()
   {                                //Si le bouton SELECTION est relaché
     proto.rouge.set(false);        //Éteindre la DEL rouge.
     proto.rouge.setBlinking(true); //Activer le mode clignotement.
-    imprimerXY();                   //Imprimer le premier point.
+    imprimerXY();                  //Imprimer le premier point.
   }
 
   if (proto.selection.isLongPressed())
   {                                 //Si le bouton SELECTION est longuement appuyé
     proto.ecran.effacer();          //Effacer l'écran
     proto.rouge.setBlinking(false); //Désactiver le mode clignotement.
-    
   }
 }
 
