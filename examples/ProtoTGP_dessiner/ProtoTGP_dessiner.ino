@@ -30,7 +30,7 @@ void setup()
 
   proto.selection.setLongPressDelay(1000); //Pour le bouton SELECTION seulement, ajuster le délai avant le long clic à 1000 millisecondes.
 
-  proto.ecran.ecrire("GAUCHE, DROITE, HAUT,\nBAS => deplacer le\ncurseur.\n\nSELECTION => effacer.", 1); //Afficher un texte explicatif.
+  proto.ecran.ecrire("GAUCHE, DROITE, HAUT,\nBAS => déplacer le\ncurseur.\n\nSELECTION => effacer.", 1); //Afficher un texte explicatif.
   proto.ecran.display();
   delay(5000);
   proto.ecran.effacer();
