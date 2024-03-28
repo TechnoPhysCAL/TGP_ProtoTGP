@@ -39,6 +39,13 @@ void ProtoTGP::setLongPressInterval(unsigned long interval)
 void ProtoTGP::begin()
 {
   ecran.begin();
+  gauche.begin();
+  droite.begin();
+  haut.begin();
+  bas.begin();
+  selection.begin();
+  rouge.begin();
+  verte.begin();
 }
 void ProtoTGP::refresh()
 {

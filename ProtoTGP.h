@@ -2,8 +2,8 @@
 #define ProtoTGP_h
 
 #include "Arduino.h"
-#include "Bouton.h"
-#include "Del.h"
+#include "BoutonPin.h"
+#include "DelPin.h"
 #include "Ecran.h"
 
 #define PIN_BUTTON_GAUCHE 33
@@ -30,8 +30,8 @@ public:
 	void setLongPressDelay(unsigned long);
 	void setLongPressInterval(unsigned long);
 
-    Bouton gauche, droite, haut, bas, selection;
-    Del rouge, verte;
+    BoutonPin gauche, droite, haut, bas, selection;
+    DelPin rouge, verte;
     Ecran ecran;
 
 private:
