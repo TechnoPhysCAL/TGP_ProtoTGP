@@ -12,7 +12,7 @@ Permet le contrôle simplifié de la plateforme de développement [ProtoTPhys](h
 
 ### 2.0.0 : 
  - Numéro de version en phase avec le reste des librairies TGP
- - Exemple déconstruit pour utiliser la plateforme ProtoTGP sans la librairie, en utilisant les composantes individuelles.
+ - Exemple déconstruit pour utiliser la plateforme de développement ProtoTPhys sans la librairie, en utilisant les composantes individuelles.
 
 ### 1.0.0 :
 - Première version officielle.

@@ -1,7 +1,7 @@
 /*
   Librairie TPG ProtoTGP - ProtoTGP_sans_librairie.ino
 
-  ### Démonstration de l'utilisation de la plateforme ProtoTGP sans la librairie ProtoTGP.
+  ### Démonstration de l'utilisation de la plateforme de développement ProtoTPhys sans la librairie ProtoTGP.
 
   Note: ###NOTE
 
