@@ -8,6 +8,16 @@ Permet le contrôle simplifié de la plateforme de développement [ProtoTPhys](h
 ![La plateforme ProtoTPhys 2V1.](ProtoTPhys_2V1.png)
 
 
+## Notes de version
+
+### 2.0.0 : 
+ - Numéro de version en phase avec le reste des librairies TGP
+ - Exemple déconstruit pour utiliser la plateforme ProtoTGP sans la librairie, en utilisant les composantes individuelles.
+
+### 1.0.0 :
+- Première version officielle.
+
+
 ## Utilisation
 
 ```cpp
@@ -45,7 +55,7 @@ void loop()
 
 ## Constructeurs
 ```cpp
-Proto()
+ProtoTGP()
 
 ```
 Aucun paramètre nécessaire; l'initialisation des divers éléments qui constituent ProtoTPhys sont initialisés selon leur broches respectives.
